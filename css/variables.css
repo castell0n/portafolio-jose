@@ -1,0 +1,29 @@
+:root,
+.light {
+    --color-titulo1:#ffffff;
+    --color-titulo2: #191e21;
+    --color-titulo3: #000000;
+
+    --baground-blanco: #000000;
+    --baground-negro: #e7e7e7;
+    --bagroind-cards: #d3d3d3;
+
+    --color-blanco-opacidad-90: #00000090;
+
+    --transform-darckActive: translateX(0);
+    --transform-darckdesactive: translateX(4rem);
+}
+.darck {
+    --color-titulo1:#000000;
+    --color-titulo2: #ffffff;
+    --color-titulo3: #3ca2a2;
+
+    --baground-blanco: #ffffff;
+    --baground-negro: #191e21;
+    --bagroind-cards: #21282c;
+
+    --color-blanco-opacidad-90: #ffffff90;
+
+    --transform-darckActive: translateX(4rem);
+    --transform-darckdesactive: translateX(0);
+}
