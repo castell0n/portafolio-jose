@@ -18,7 +18,7 @@
     display: grid;
     justify-items: center;
     align-items: center;
-    z-index: 9999;
+    z-index: 999;
     left: 0;
     top: 0;
     padding: 0
@@ -87,6 +87,7 @@ body {
 
 /* Style encabezado */
 .encabezado {
+    position: relative;
     background-image: url(../assets/img_perfil/banner.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -97,7 +98,7 @@ body {
     padding: 1rem 1rem;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    z-index: 888;
     top: 0;
     left: 0;
 }
@@ -428,8 +429,8 @@ body {
     overflow: auto;
 }
 .content_proyectos .proyectos_items .proyecto_lenguajes img {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     object-fit: contain;
 }
 /* stylo para la sección de mis ultimos proyectos agregados */
@@ -604,7 +605,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    z-index: 888;
 }
 /* stylos para la sección contacto */
 
@@ -624,7 +625,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 5px 0 0 5px;
-    z-index: 999;
+    z-index: 888;
     overflow: hidden;
     cursor: pointer;
 }
@@ -718,6 +719,15 @@ body {
         background-image: none;
         background: var(--bagroind-cards);
         height: 4rem;
+    }
+    .encabezado .lineAvance {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: .2s;
+        background: var(--color-titulo3);
+        width: 2rem;
+        height: 0.1rem;
     }
     .encabezado .cont_imgperfil {
         position: initial;

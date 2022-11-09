@@ -9,6 +9,14 @@ window.onload = function(){
 }
 
 
+function animationLineScroll() {
+  const {scrollTop, scrollHeight} = document.documentElement;
+  const scrollPercent = `${(scrollTop / (scrollHeight - window.innerHeight)) * 100}%`
+  document.querySelector(".lineAvance").style.width = scrollPercent;
+}
+document.addEventListener("scroll", animationLineScroll);
+
+
 const btnSwith = document.querySelector(".contendarck");
 
 btnSwith.addEventListener("click", ()=> {
@@ -118,14 +126,14 @@ document.getElementById('form')
 
 // se obtiene la posición de los elementos
 function getOffset( el ) {
-  var _x = 0;
-  var _y = 0;
+  var posicionX = 0;
+  var posicionY = 0;
   while( el && !isNaN( el.offsetLeft ) && !isNaN( el.offsetTop ) ) {
-        _x += el.offsetLeft - el.scrollLeft;
-        _y += el.offsetTop - el.scrollTop;
+        posicionX += el.offsetLeft - el.scrollLeft;
+        posicionY += el.offsetTop - el.scrollTop;
         el = el.offsetParent;
   }
-  return { top: _y, left: _x };
+  return { top: posicionY, left: posicionX };
   }
 
 const widthBody = document.querySelector('body');
@@ -165,7 +173,6 @@ const topproyectos = getOffset( document.querySelector('.content_proyectos') ).t
 document.getElementById("btnproyectos").addEventListener("click", ()=> {
   document.documentElement.scrollTop = topproyectos - masTop;
 });
-
 
 // ir a la seccion de servicios
 const topservicios = getOffset( document.querySelector('.conten_servicios') ).top;
